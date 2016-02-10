@@ -1,3 +1,16 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+<div class="container">
+	<h2 class="header">Welcome to Ember</h2>
+	{{#if metawearConnected}}
+		<div class="row">
+			<div class="s12"><span class="flow-text">Connected</span></div>
+		</div>
+		<button class="btn waves-effect waves-light">Connect to Metawear
+			<i class="material-icons right">send</i>
+		</button>
+	{{else}}
+		<div class="row">
+			<div class="s12"><span class="flow-text">Not Connected</span></div>
+		</div>
+	{{/if}}
+	{{outlet}}
+</div>
